@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+
+<form action="/category" method="post">
+    {% csrf_token %}
+    <div class="mb-3 mt-3">
+      <label for="category" class="form-label">Category:</label>
+      <input type="text" class="form-control" id="category" placeholder="Enter category" name="ankur">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div> 
+{% endblock %}

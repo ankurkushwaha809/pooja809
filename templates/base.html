@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--  {% load static%}  -->
+    <!--  <link rel="stylesheet" herf="{% static 'index.css'%}">  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>KidsJoy
+      {% block title %}{% endblock title %}
+    </title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+ <style>
+ .BG{background-image: linear-gradient(to right bottom, #132546, #1a2243, #201e40, #251b3b, #291737, #221836, #1c1934, #161932, #081b2d, #061b26, #0c1a1e, #131818);
+  padding: 20px;
+  
+
+}
+ </style>
+  <body class=" m-0 border-0 ">
+    <!-- Example Code -->
+    
+    <nav class="navbar navbar-expand-lg BG navbar-dark">
+      <div class=" container-fluid">
+        <a class="navbar-brand" href="/">KidsJoy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                service
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/service1">service 1</a></li>
+                <li><a class="dropdown-item" href="service2">service 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/service">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">contact</a>
+            </li>
+          </ul>
+          <form class="d-flex example" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    {% block body  %}
+    {% endblock %}
+  </body>
+</html>  

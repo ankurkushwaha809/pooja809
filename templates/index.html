@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% block title %}| Index{%endblock%}
+
+{% block body %}
+<div class="container" style="margin-top: 2rem; text-align: center;">
+  <h4 style="text-align: center;">Index</h4>
+
+          <table class="table table-bordered border-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th colspan="2">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for book in categorys %}
+            <tr>
+              <th scope="row">{{ book.category_id }}</th>
+              <td>{{ book.name }}</td>
+              <td><a href="edit_category/{{book.category_id}}" class="btn btn-warning" id = '{{book.category_id}}'>edit</a></td>
+              <td><a href="delete/{{book.category_id}}" class="btn btn-danger" id = '{{book.category_id}}'>delete</a></td>
+            </tr>
+           {% endfor %}
+          </tbody>
+        </table>  
+</div>      
+{% endblock%}
+
+    <!-- End Example Code -->
