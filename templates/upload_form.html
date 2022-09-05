@@ -4,12 +4,12 @@
 <div class="container">
    
 
-<form method="POST" class="post-form" action="/update/{{employee.category_id}}">  
+<form action="/index" method="post">
     {% csrf_token %}
     <div class="mb-3 mt-3">
 
       <label for="edit_category" class="form-label">Edit Category:</label>
-      <input type="text" class="form-control" id="edit_category" placeholder="Enter category" name="ankur" value="{{ employee.name }}">
+      <input type="text" class="form-control" id="edit_category" placeholder="Enter category" name="ankur">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
